@@ -24,7 +24,7 @@ def detail(request, post_id):
 def category_page(request, slug):
     # 카테고리
     category = Category.objects.get(slug=slug)
-    post_list = Post.objects.filter(categroy=category)
+    post_list = Post.objects.filter(category=category)
     categories = Category.objects.all()
     context = {
         'category':category,
